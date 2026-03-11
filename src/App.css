@@ -1,5 +1,11 @@
 .section-container {
-  width: 1300px;
+  width: 100%;
+  max-width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-sizing: border-box;
 }
 .title,
 .para {
@@ -11,18 +17,26 @@
 }
 @media only screen and (max-width: 1600px) {
   .section-container {
-    width: 1200px;
-    max-width: calc(100% - 160px);
+    max-width: 1200px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
 @media only screen and (max-width: 1400px) {
   .section-container {
-    width: 900px;
+    max-width: 900px;
   }
 }
 @media only screen and (max-width: 900px) {
   .section-container {
-    width: 500px;
-    max-width: var(--cWidth);
+    max-width: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .section-container {
+    padding-left: 12px;
+    padding-right: 12px;
   }
 }
