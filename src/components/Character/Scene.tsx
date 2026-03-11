@@ -37,6 +37,18 @@ const Scene = () => {
       renderer.toneMappingExposure = 1;
       canvasDiv.current.appendChild(renderer.domElement);
 
+      // Handle WebGL context loss/restore
+      renderer.domElement.addEventListener('webglcontextlost', (event) => {
+        event.preventDefault();
+        console.warn('WebGL context lost. Attempting to restore...');
+      });
+
+      renderer.domElement.addEventListener('webglcontextrestored', () => {
+        console.log('WebGL context restored.');
+        renderer.setSize(container.width, container.height);
+        renderer.setPixelRatio(window.devicePixelRatio);
+      });
+
       const camera = new THREE.PerspectiveCamera(14.5, aspect, 0.1, 1000);
       camera.position.z = 10;
       camera.position.set(0, 13.1, 24.7);
