@@ -17,7 +17,7 @@ const projects = [
     category: "Smart Freelancer Hiring System",
     tools: "React.js, Node.js, Socket.io, Express.js",
     image: "/images/skillsync.png",
-    link: "https://skill-sync-six-xi.vercel.app/",
+    link: "https://skillsync-amber.vercel.app",
     github: "https://github.com/Deep-2308/SkillSync",
   },
   {
